@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc XAssembler<intel syntax> main.c -o  main.s > $CFILE
+gcc -S -masm=intel main.c -o main.s > $CFILE
