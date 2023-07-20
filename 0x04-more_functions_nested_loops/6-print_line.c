@@ -17,3 +17,4 @@ void print_line(int n)
 			_putchar('-');
 		}while(count < n)
 	}
+}
