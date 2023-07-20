@@ -6,12 +6,9 @@
  * $b - second int 
  * Return - Result of a and b addition
  */
-
 int add(int a, int b)
 {
-	int answer;
-	
-	answer = a +b;
-
+	int answer;	
+	answer = a + b;
 	return (answer);
 }
