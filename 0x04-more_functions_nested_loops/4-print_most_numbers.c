@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_most_numbers - print numbers from 0 - 9 except 2 and 4
  * Return: Always void (Success)
