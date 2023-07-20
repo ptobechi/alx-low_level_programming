@@ -7,9 +7,7 @@
  *
  * Return: Always 0.
  */
-int _isupper(void)
+int _isupper(int c)
 {
-    char c;
-
-    return ((c >= 65) && (c <= 90));
+    return (c > 64 && c < 91)
 }
