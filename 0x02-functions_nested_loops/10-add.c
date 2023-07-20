@@ -2,9 +2,9 @@
 
 /**
  * add - add two nnumbers and return results
- * @a - first int 
- * $b - second int 
- * Return - Result of a and b addition
+ * @a: - first int 
+ * $b:  - second int 
+ * Return: - Result of a and b addition
  */
 int add(int a, int b)
 {
