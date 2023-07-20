@@ -1,4 +1,4 @@
-#include "header.h"
+#include "main.h"
 
 /**
  * print_alphabet - print alphabet in loweercase followed by a nnew linne
@@ -7,11 +7,14 @@
 
 void print_alphabet(void)
 {
-	char c;
+	char alp = 'a';
 
-	for (c = 'a'; c <= 'z'; c++)
+	while (alp <= 'z')
 	{
-		_putchar(c);
+		_putchar (alp);
+		alp++;
+
 	}
-	_putchar(10);
+	_putchar ('\n');
+
 }
