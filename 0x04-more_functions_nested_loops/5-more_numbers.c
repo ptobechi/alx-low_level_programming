@@ -9,12 +9,12 @@ void more_numbers(void)
 int i;
 int count = 0;
 
-while (count < 11)
+do
 {
-for (i = 0; i < 15; i++)
+for (i = 0; i <= 14; i++)
 {
 _putchar('0' +  10 * i);
-}
+}while(count < 10)
 _putchar('\n');
 
 count++;
