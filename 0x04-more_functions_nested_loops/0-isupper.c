@@ -1,5 +1,5 @@
 #include "main.h"
-#include <ctype.h>
+#include <stdio.h>
 
 /**
  * _isupper - returns 1 if true else return 0
