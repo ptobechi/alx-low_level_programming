@@ -11,5 +11,5 @@ int _isupper(void)
 {
     char c;
 
-    return ((c > 64) && (c < 91));
+    return ((c >= 65) && (c <= 90));
 }
