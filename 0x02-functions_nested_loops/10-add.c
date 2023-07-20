@@ -7,7 +7,7 @@
  * Return - Result of a and b addition
  */
 
-int add(int a int b)
+int add(int a, int b)
 {
 	int answer;
 	
