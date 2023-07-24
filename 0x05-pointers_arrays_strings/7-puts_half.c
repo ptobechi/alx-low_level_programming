@@ -13,7 +13,7 @@ void puts_half(char *str)
 
 	if (len % 2 == 0)
 	{
-		printf("%s\n, str + length / 2);
+		printf("%s\n":, str + length / 2);
 	}
 	else
 	{
