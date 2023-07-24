@@ -2,10 +2,8 @@
 #include <string.h>
 
 /**
- * puts2 - print every other number startign from the first line
- *
+ * puts2 - print every other number startign from the first lin
  * @str: string to print from
- *
  * Return: Return void (Success)
 */
 void puts2(char *str)
@@ -20,5 +18,5 @@ void puts2(char *str)
 			printf("%c", str[count]);
 		}
 	}
-	printf("\n");	
+	printf("\n");
 }
