@@ -9,7 +9,7 @@
 void puts_half(char *str)
 {
 	int len = strlen(str);
-	int count = (len - 1) / 2;
+	int n = (len - 1) / 2;
 
 	if (len % 2 == 0)
 	{
@@ -17,6 +17,6 @@ void puts_half(char *str)
 	}
 	else
 	{
-		printf("%s\n", str + count);
+		printf("%s\n", str + n);
 	}
 }
