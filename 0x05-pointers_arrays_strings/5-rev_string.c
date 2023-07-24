@@ -8,9 +8,12 @@
 void rev_string(char *s)
 {
 	size_t len;
+	char temp[];
 
 	for (; len > 0; len--)
 	{
-		*s = s[len - 1];
+		strcat(temp, s[len - 1]);
 	}
+	*s = temp;
 }
+
