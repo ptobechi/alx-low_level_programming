@@ -17,6 +17,6 @@ void print_rev(char *s)
 
 	for (; len > 0; len--)
 	{
-		printf("%c", s[len]);
+		printf("%c", s[len + 1]);
 	}
 }
