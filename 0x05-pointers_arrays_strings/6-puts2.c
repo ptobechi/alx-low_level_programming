@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * puts2 - print every other number startign from the first line
@@ -10,18 +11,14 @@
 void puts2(char *str)
 {
 	int count;
-	
-	while (count >= 0)
+	int len = strlen(str);
+
+	for (count = 0; count < len; count++)
 	{
-		if (str[count] == '\0')
+		if (count % 2 == 0)
 		{
-			printf("\n");
-			break;
-		}
-		if (str[count] % 2 == 0)
-		{
-			printf("%d", str[count]);
-			count++;
+			printf("%c", str);
 		}
 	}
+	printf("\n");	
 }
