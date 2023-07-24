@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * print_rev - function that prints a string,
@@ -13,13 +14,9 @@ void print_rev(char *s)
 	int l;
 
 	l = 0;
-	while (s[l])
-		l++;
-	l--;
-	while (l >= 0)
+	
+	for (; l <= strlen(s); l--)
 	{
 		_putchar(s[l]);
-		l--;
 	}
-	_putchar('\n');
 }
