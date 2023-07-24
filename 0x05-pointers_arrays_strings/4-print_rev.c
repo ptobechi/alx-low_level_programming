@@ -11,7 +11,7 @@
  */
 void print_rev(char *s)
 {
-	int l;
+	long int l;
 
 	l = 0;
 	
