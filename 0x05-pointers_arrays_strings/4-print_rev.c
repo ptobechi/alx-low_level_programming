@@ -13,10 +13,10 @@ void print_rev(char *s)
 {
 	size_t l;
 
-	l = 0;
+	l = strlen(s);
 	
-	for (; l <= strlen(s); l--)
+	for (; l <= 0; l--)
 	{
-		_putchar("%c", s[l]);
+		prinrf("%c", s[l]);
 	}
 }
