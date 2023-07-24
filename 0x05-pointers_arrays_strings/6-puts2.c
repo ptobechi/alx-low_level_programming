@@ -18,7 +18,7 @@ void puts2(char *str)
 			printf("\n");
 			break;
 		}
-		if (count % 2 == 0)
+		if (str[count] % 2 == 0)
 		{
 			printf("%d", str[count]);
 			count++;
