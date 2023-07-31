@@ -1,17 +1,26 @@
 /**
- * _strspn - returns the number of bytes that consist of accept
- * @s: string
- * @accept: char to check for in the pointeer
- * Return: Always 0 (Success)
-*/
+ * _strspn - gets the length of a prefix substring.
+ * @s: initial segment.
+ * @accept: accepted bytes.
+ * Return: the number of accepted bytes.
+ */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
+	unsigned int i, j, bool;
 
-	while (*s != '\0')
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		if (*s == *accept)
-			count = count + 1;
+		bool = 1;
+		for (j = 0; *(accept + j) != '\0'; j++)
+		{
+			if (*(s + i) == *(accept + j))
+			{
+				bool = 0;
+				break;
+			}
+		}
+		if (bool == 1)
+			break;
 	}
-	return (count);
+	return (i);
 }
