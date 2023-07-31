@@ -1,5 +1,3 @@
-#include <stddef.h>
-
 /**
  * _strchr - returns a pointer to the first occurence of a string
  * @c: character to check for and return
@@ -14,6 +12,6 @@ char *_strchr(char *s, char c)
 			return (s);
 		s++;
 	}
-	return (NULL);
+	return ('\0');
 }
 
