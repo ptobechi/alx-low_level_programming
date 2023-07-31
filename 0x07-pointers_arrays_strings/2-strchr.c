@@ -8,23 +8,12 @@
 */
 char *_strchr(char *s, char c)
 {
-	int count_string = 0;
-	int search = 0;
-	char *result;
-
-	for (; s[count_string] !='\0'; count_string++)
-		count_string = count_string + 1;
-
-	for (; search < count_string; search++)
+	while (*s != '\0')
 	{
-		if (s[search] == c)
-		{
-			result = s[search];
-		}
+		if (*s == c)
+			return s;
+		s++;
 	}
-
-	if (*result != '\0')
-		result = NULL;
-	return (result);
+	return (NULL);
 }
 
