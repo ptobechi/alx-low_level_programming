@@ -6,6 +6,7 @@
  * file: main.h
  * description: Prototype used for the 0x08-recursive projct
 */
+int _putchar(char);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
