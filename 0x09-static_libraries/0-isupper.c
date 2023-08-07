@@ -1,1 +1,4 @@
-#include "main.h"
+int _isupper(char c)
+{
+	return (0);
+}
