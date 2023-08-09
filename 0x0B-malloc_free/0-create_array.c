@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * create_array - creates an array of char and initialize it with a specific char
+ * create_array - creates an array of char and ini it with a specific char
  * @size: size of array
  * @c: char
  * Return: Always 0 (Success)

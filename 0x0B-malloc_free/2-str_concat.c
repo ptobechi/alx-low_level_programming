@@ -23,12 +23,12 @@ char *str_concat(char *s1, char *s2)
 	for (j = 0; s2[j] != '\0'; j++)
 		;
 
-	strp = malloc(sizeof(char) * (i + j) + 1));
+	strp = malloc(sizeof(char) * (i + j) + 1);
 
 	if (strp == NULL)
 	{
 		free(strp);
-		return NULL);
+		return (NULL);
 	}
 
 	for (k = 0; k < i; k++)
