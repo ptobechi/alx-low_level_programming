@@ -1,5 +1,5 @@
-#ifndef FP_H
-#define FP_H
+#ifndef _FUNCTION_POINTERS_
+#define _FUNCTION_POINTERS_
 
 /**
  * Author: Tobechukwu Paschal
