@@ -1,6 +1,8 @@
 #ifndef _FUNCTION_POINTERS_
 #define _FUNCTION_POINTERS_
 
+#include <stdlib.h>
+
 /**
  * Author: Tobechukwu Paschal
  * file: function_pointers.h
