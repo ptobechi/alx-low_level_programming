@@ -20,7 +20,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		{
 			found = cmp(array[i]);
 			if (found)
-				return (array[i]);
+				return (i);
 		}
 	}
 	return (-1);
