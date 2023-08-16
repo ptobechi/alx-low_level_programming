@@ -5,6 +5,7 @@
  * @array: an array of integer
  * @size: number of array element
  * @cmp: function pointer to compare integer
+ * Return: Always 0 (Success)
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -19,13 +20,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 		{
 			found = cmp(array[i]);
 			if (found)
-			{
 				return (array[i]);
-			}
-			else
-			{
-				return (-1);
-			}
 		}
 	}
+	return (-1);
 }
