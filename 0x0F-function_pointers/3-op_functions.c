@@ -1,4 +1,4 @@
-op_functions#include <stdio.h>
+#include <stdio.h>
 
 /**
  * op_add - performs a add operation
@@ -7,10 +7,10 @@ op_functions#include <stdio.h>
  * Return: Always 0 (Success)
 */
 int op_add(int a, int b)
-{       
-        if (a && b)
-                return (atoi(a) + atoi(b));
-}       
+{
+	if (a && b)
+		return (a + b);
+}
 
 /**
  * op_sub - perfoms sub operation
@@ -19,21 +19,21 @@ int op_add(int a, int b)
  * Return: Always 0 (Succes)
 */
 int op_sub(int a, int b)
-{       
-        if (a && b)
-                return (atoi(a) - atoi(b));
-}       
+{
+	if (a && b)
+		return (a - b);
+}
 
 /**
  * op_mul - performs multiplication operation
- * @b: int a
+ * @a: int a
  * @b: int b
- * Return: Always 0 (Succeess) 
+ * Return: Always 0 (Succeess)
 */
 int op_mul(int a, int b)
-{       
-        if ( a && b)
-                return (atoi(a) * atoi(b));
+{
+	if (a && b)
+		return (a * b);
 }
 
 /**
@@ -44,8 +44,13 @@ int op_mul(int a, int b)
 */
 int op_div(int a, int b)
 {
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	if (a && b)
-		return (atoi(a) / atoi(b));
+		return (a / b);
 }
 
 /**
@@ -56,6 +61,11 @@ int op_div(int a, int b)
 */
 int op_mod(int a, int b)
 {
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	if (a && b)
-		return (atoi(a) % atoi(b));
+		return (a % b);
 }
