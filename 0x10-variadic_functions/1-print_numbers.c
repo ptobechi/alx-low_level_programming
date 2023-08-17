@@ -11,7 +11,7 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	int i;
-	var_list list;
+	va_list list;
 
 	if (seperator == NULL)
 		return (0);
@@ -21,5 +21,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		printf("%d%s ", var_arg(list, int), seperator);
 	}
+	va_end(list);
 	printf("\n");
 }
