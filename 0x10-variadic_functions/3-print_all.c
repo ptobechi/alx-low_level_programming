@@ -4,3 +4,4 @@
 /**
  * print_all - print any character
  * @format: format to print
+*/
