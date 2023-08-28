@@ -1,11 +1,11 @@
-#include <stdio.h>
 #include "lists.h"
 
-/*
- * print_listint - prints all element of a linked list
- * @h: head of the list
- * Return: Always 0 (Successw)
-*/
+/**
+ * print_listint - prints all the elements of a list.
+ * @h: head of a list.
+ *
+ * Return: numbers of nodes.
+ */
 size_t print_listint(const listint_t *h)
 {
 	size_t count = 0; /* The number of nodes on the list */
