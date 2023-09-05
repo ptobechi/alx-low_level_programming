@@ -22,23 +22,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (file_ptr == NULL)
 		return (0);
 
-	while (printed_char < letters)
+	/*check printed letter counts and assigns the char to var if not EOF*/
+	while (printed_char < letters && (_char = fgetc(file_ptr)) != EOF)
 	{
-		/* get char from file buffer */
-		_char = fgetc(file_ptr);
-
-		if (_char != EOF)
-		{
-			write(1, &_char, 1);
-			printed_char++;
-		}
-		else
-		{
-			return (0);
-		}
+		write(1, &_char, 1);
+		printed_char++;
 	}
 	fclose(file_ptr);
-
 
 	return (printed_char);
 
