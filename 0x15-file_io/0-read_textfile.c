@@ -10,14 +10,14 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	size_t printed_char = 0;
-	FILE *file_ptr;
+	FILE *file_ptr = NULL;
 	int _char;
 
 	if (filename == NULL)
 		return (0);
 
 	/* open the file in read mode */
-	file_ptr = fopen(filename, "r");
+	file_ptr = fopen(filename, "r+");
 
 	if (file_ptr == NULL)
 		return (0);
