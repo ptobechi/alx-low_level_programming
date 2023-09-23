@@ -30,7 +30,7 @@ int create_file(const char *file, char *content)
 	for (nletters = 0; content[nletters]; nletters++)
 		;
 
-	rwr = write(fd, content, nletters);
+	rwr = write(filed, content, nletters);
 
 	if (rwr == -1)
 		return (-1);
