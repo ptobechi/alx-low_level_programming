@@ -1,29 +1,41 @@
 #include "main.h"
 
 /**
- * create-file - creates a file
- * @filename: name of file to create
- * @text_content: string to write to file
+ * create_file - creates a file
+ * @file: filename.
+ * @content: content writed in the file.
  *
- * Return: Always 0 (Success)
-*/
-int create_file(const char *filename, char *text_content)
+ * Return: 1 if it success. -1 if it fails.
+ */
+int create_file(const char *file, char *content)
 {
-	FILE *file_ptr = NULL;
+	int filed;
+	int nletters;
+	int rwr;
 
-	if (filename == NULL)
+	if (!file)
 		return (-1);
 
-	file_ptr = fopen(filename, "w+");
+	/** open file */
+	filed = open(file, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-	if (file_ptr == NULL)
+	/** rerturn if fail */
+	if (filed == -1)
 		return (-1);
 
-	while (*text_content != '\0')
-	{
-		fputc(*text_content, file_ptr);
-		text_content++;
-	}
-	fclose(file_ptr);
+	/* set content if not set */
+	if (!content)
+		content = "";
+
+	for (nletters = 0; content[nletters]; nletters++)
+		;
+
+	rwr = write(fd, content, nletters);
+
+	if (rwr == -1)
+		return (-1);
+
+	close(filed);
+
 	return (1);
 }
