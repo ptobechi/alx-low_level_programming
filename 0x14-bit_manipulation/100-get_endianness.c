@@ -2,8 +2,8 @@
 
 /**
  * get_endianness - checks the endianess
- *
- * Retun: Always 0 (success)
+ * @void: no argumrnt
+ * Return: Always 0 (success)
 */
 int get_endianness(void)
 {
