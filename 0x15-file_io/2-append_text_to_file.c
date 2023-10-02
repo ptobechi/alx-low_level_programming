@@ -15,14 +15,12 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	/*open file in append mode*/
-	file_ptr = fopen(filename, O_WRONLY | O_APPEND);
+	file_ptr = fopen(filename, "a");
 
 	/* check edge cases for text content and file avail */
-	if (text_content == NULL && file_ptr != NULL)
+	if (text_content == NULL || file_ptr == NULL || file_ptr == -1)
 		return (1);
 
-	if (text_content == NULL && file_ptr == NULL)
-		return (-1);
 
 	/*append to file */
 	while (*text_content != '\0')
