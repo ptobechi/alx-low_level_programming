@@ -19,7 +19,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	/* check edge cases for text content and file avail */
 	if (text_content == NULL || file_ptr == NULL || file_ptr == -1)
-		return (1);
+		return (-1);
 
 
 	/*append to file */
