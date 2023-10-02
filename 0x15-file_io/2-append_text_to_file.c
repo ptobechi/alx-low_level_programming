@@ -18,14 +18,11 @@ int append_text_to_file(const char *filename, char *text_content)
 	file_ptr = fopen(filename, "a");
 
 	/* check edge cases for text content and file avail */
-	if (file_ptr == NULL && text_content == NULL)
+	if (file_ptr == NULL)
 		return (-1);
 
-	if (file_ptr != NULL && text_content == NULL)
-		return (1);
-
 	/*append to file */
-	while (*text_content != '\0')
+	while (*text_content != '\0' && text_content != NULL)
 	{
 		fputc(*text_content, file_ptr);
 		text_content++;
