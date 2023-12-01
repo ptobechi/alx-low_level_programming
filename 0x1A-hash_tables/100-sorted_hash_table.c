@@ -27,7 +27,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * update_existing_key - Update the value of an existing key
+ * supdate_existing_key - Update the value of an existing key
  * @current: The existing node
  * @value: The new value
  * Return: 1 on success, 0 on failure
@@ -187,7 +187,7 @@ void shash_table_delete(shash_table_t *ht)
 }
 
 /**
- * create_node - Create a new hash node
+ * screate_node - Create a new hash node
  * @key: The key
  * @value: The value
  * Return: A pointer to the newly created node, or NULL on failure
@@ -234,7 +234,8 @@ void insert_sorted_node(shash_table_t *ht, shash_node_t *new_node)
 		return;
 	}
 
-	while (current->snext != NULL && strcmp(new_node->key, current->snext->key) > 0)
+	while (current->snext != NULL && strcmp(new_node->key,
+				current->snext->key) > 0)
 		current = current->snext;
 
 	new_node->snext = current->snext;
@@ -245,3 +246,4 @@ void insert_sorted_node(shash_table_t *ht, shash_node_t *new_node)
 		ht->stail = new_node;
 	current->snext = new_node;
 }
+
