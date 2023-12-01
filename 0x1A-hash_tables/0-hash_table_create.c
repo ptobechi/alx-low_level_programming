@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-#include <stdlib.h>
 
 /**
  * hash_table_create - Create a hash table
@@ -9,11 +8,10 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i = 0;
+	hash_table_t *new_table = malloc(sizeof(hash_table_t));
 
 	if (size == 0)
 		return (NULL);
-
-	hash_table_t *new_table = malloc(sizeof(hash_table_t));
 
 	if (new_table == NULL)
 		return (NULL);
