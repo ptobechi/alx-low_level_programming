@@ -6,7 +6,7 @@
  * @value: The value
  * Return: A pointer to the newly created node, or NULL on failure
  */
-static hash_node_t *create_node(const char *key, const char *value)
+hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
 
@@ -33,7 +33,7 @@ static hash_node_t *create_node(const char *key, const char *value)
  * @value: The new value
  * Return: 1 on success, 0 on failure
  */
-static int update_existing_key(hash_node_t *current, const char *value)
+int update_existing_key(hash_node_t *current, const char *value)
 {
 	char *new_value = strdup(value);
 
@@ -55,11 +55,15 @@ static int update_existing_key(hash_node_t *current, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	unsigned long int index;
+	hash_node_t *current;
+	hash_node_t *new_node;
+
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
 
-	unsigned long int index = key_index((unsigned char *)key, ht->size);
-	hash_node_t *current = ht->array[index];
+	index = key_index((unsigned char *)key, ht->size);
+	current = ht->array[index];
 
 	while (current != NULL)
 	{
@@ -69,7 +73,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current = current->next;
 	}
 
-	hash_node_t *new_node = create_node(key, value);
+	new_node = create_node(key, value);
 
 	if (new_node == NULL)
 		return (0);

@@ -8,14 +8,18 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
+	unsigned long int index = 0;
+
+	hash_node_t *current = NULL;
+
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 
 	/* Get the index where the key should be stored */
-	unsigned long int index = key_index((unsigned char *)key, ht->size);
+	index = key_index((unsigned char *)key, ht->size);
 
 	/* Search for the key in the linked list at the calculated index */
-	hash_node_t *current = ht->array[index];
+	current = ht->array[index];
 
 	while (current != NULL)
 	{
